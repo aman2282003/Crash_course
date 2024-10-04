@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #im {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        height: 300px;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <select id="drop-down" onchange="handleChange(this)">
+        <option value="./dog.jpeg">Dog</option>
+        <option value="./cat.jpeg">Cat</option>
+        <option value="./elephant.jpeg">Elephant</option>
+        <option value="./lion.jpeg">Lion</option></select
+      ><br />
+      <div id="im">
+        <img id="image" src="./dog.jpeg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  const dropDown = document.getElementById("drop-down");
+
+  let image = document.getElementById("image");
+  const handleChange = (e) => {
+    image.src = e.value;
+  };
+</script>
