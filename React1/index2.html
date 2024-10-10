@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // 1st try
+      //   const root = document.getElementById("root");
+      //   const App = () => {
+      //     return <p>Seize the day</p>;
+      //   };
+      //   const rootElement = ReactDOM.createRoot(root);
+      //   rootElement.render(<App />);
+
+      // 2nd try
+
+      //   const root = document.getElementById("root");
+      //   const App = () => {
+      //     const data = "Seize the day";
+      //     return <p>{data}</p>;
+      //   };
+      //   const rootElement = ReactDOM.createRoot(root);
+      //   rootElement.render(<App />);
+
+      //   3rd try
+
+      const root = document.getElementById("root");
+      const App = () => {
+        const value = 9;
+        return <p>{value > 9 ? "seize the day" : "seize the night"}</p>;
+      };
+      const rootElement = ReactDOM.createRoot(root);
+      rootElement.render(<App />);
+    </script>
+  </body>
+</html>
