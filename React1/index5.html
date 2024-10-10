@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // Your JSX code here
+
+      const root = document.getElementById("root");
+
+      const App = () => {
+        return (
+          <>
+            <img
+              src={"./watch.png"}
+              style={{ height: "300px", width: "500px" }}
+              alt=""
+            />
+            <h1>Automatic Watch</h1>
+            <p style={{ fontSize: "30px" }}>$350.00 USD</p>
+            <p style={{ color: "grey" }}>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
+              veritatis pariatur reiciendis error provident doloribus magnam!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+              dicta pariatur asperiores illum, voluptas molestiae sapiente iure
+              eos doloremque magni nostrum consequuntur deserunt minus nisi
+              reiciendis esse tenetur, aliquid velit?
+            </p>
+            <hr />
+            <p style={{ color: "orange" }}>Features</p>
+            <table>
+              <tr>
+                <td>Chornograph</td>
+                <td>Anti-magnetic</td>
+              </tr>
+              <tr>
+                <td style={{ margin: "25px" }}>Mater chronometer Certified</td>
+                <td>Chronomtere</td>
+              </tr>
+              <tr>
+                <td>Tachymeter</td>
+                <td>Small second</td>
+              </tr>
+            </table>
+            <hr />
+            <h3 style={{ color: "orange" }}>PRODUCT DETAILS</h3>
+            <p>
+              <bold>Between lungs</bold>: 20mm
+            </p>
+            <p>
+              <bold>Bracelet</bold>: leather strap
+            </p>
+            <p>
+              <bold>Case</bold>: steal
+            </p>
+            <p>
+              <bold>Case diameter</bold>: 42 mm
+            </p>
+            <p>
+              <bold>Dial Color</bold>: Black
+            </p>
+            <p>
+              <bold>Crystal</bold>: Domed, scratch-resistance sapphire crystal
+              with anti-reglective tratmentinside
+            </p>
+            <p>
+              <bold>Water resistance</bold>: 5 bar (5metres / 167 meter)
+            </p>
+            <button
+              style={{
+                color: "white",
+                backgroundColor: "black",
+                width: "500px",
+                padding: "10px",
+                borderRadius: "5px",
+              }}
+            >
+              ADD TO CART
+            </button>
+            <p style={{ textAlign: "center" }}>2-3 business days delhivery</p>
+          </>
+        );
+      };
+      const rootElement = ReactDOM.createRoot(root);
+      rootElement.render(<App />);
+    </script>
+  </body>
+</html>
