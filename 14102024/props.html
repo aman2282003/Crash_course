@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Components in React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // Write your code here
+
+      const Heading = () => {
+        return (
+          <>
+            <h1>
+              Getting started in{" "}
+              <span style={{ color: "green" }}>3 easy steps</span>
+            </h1>
+          </>
+        );
+      };
+
+      const Box = (props) => {
+        return (
+          <>
+            <div style={{ margin: "20px", width: " 350px" }}>
+              <button
+                style={{
+                  border: "none",
+                  backgroundColor: "lightGreen",
+                  borderRadius: "5px",
+                }}
+              >
+                {props.count}
+              </button>
+              <h2 style={{ fontWeight: "bold" }}>{props.highlight}</h2>
+              <p>{props.para}</p>
+            </div>
+          </>
+        );
+      };
+
+      const App = () => {
+        return (
+          <>
+            <div style={{ textAlign: "center" }}>
+              <Heading />
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <Box
+                  highlight="Find your Templete"
+                  para="Every template is embedded within an iframe, so you can easily check what they look like and test the responsive behaviour.
+
+"
+                  count="01"
+                />
+                <Box
+                  highlight="Copy Your Code"
+                  para="Click the code tab to see the actual source code of the template. Copy and paste it into your project and adjust it to your needs.
+"
+                  count="02"
+                />
+                <Box
+                  highlight="Enjoy your free time"
+                  para="You've just saved yourself a bunch of time not building the same stuff over and over again. Enjoy your free time, and build business features."
+                  count="03"
+                />
+              </div>
+            </div>
+          </>
+        );
+      };
+      let root = document.getElementById("root");
+      const RootElement = ReactDOM.createRoot(root);
+      RootElement.render(<App />);
+    </script>
+  </body>
+</html>
